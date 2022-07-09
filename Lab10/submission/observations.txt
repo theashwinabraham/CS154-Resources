@@ -1,0 +1,22 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+Three files containing words were created: subject.txt, object.txt and verb.txt, containing subjects, objects and verbs respectively.
+In the simple version of the program, no irregular verbs and verbs ending in 'e' were chosen, and the person and number of the object were
+not taken into consideration, whereas in the extended version, the files above were extended into subject_extended.txt, object_extended.txt,
+and verb_extended.txt, which contained irregular verbs and verbs ending in 'e'. The extended program also took the number and person of the 
+subject into consideration.
+
+Purely iterative and purely recursive programs were written for the simple version of the program, and a purely recursive version was 
+written for the extended version of the program.
+
+In all three versions, lists were made of the subjects, objects and verbs in the text files, and various combinations of these were printed.
+The formed sentences were modified in order to conform to the rules of English grammar. The simple program considered the use of the definite 
+article and also the tenses of the verbs whereas the extended program considered these as well as the persons of the subjects and objects and the
+numbers of the subjects and objects.
+
+In the iterative simple version, three nested for loops were used, and all the possible combinations were considered and modified, then printed.
+
+In the recursive versions, a function was defined taking the three lists, and the base case was when the length of each list is one.
+In the general case, one of the list was split into two parts, one containing only the first element, and the other containing the remainder
+of the list. This was done recursively until all the combinations of list elements were considered.

@@ -1,0 +1,50 @@
+We learn to design inheritance hierarchy given feature matrix.
+
+                Product A        Product B    Product C
+
+feature 1       y              y                          y
+
+feature 2         y
+
+feature 3           y              y
+
+
+
+
+
+
+
+In the above example, Superclass has feature 2 only, then its child has feature 3 added, and then the child of the subclass has feature 1 added.
+
+
+
+First solve the above problem and then solve for problems that will be uploaded in a separate file. your code should show the working of the product hierarchy by actually creating products and calling member functions on them. Cout statements is the least thing that you can have inside your feature functions. The problems added separately are taken from realistic examples. You can simulate  them using class hierarchy and member functions. The idea is to understand common features among groups of products and make a class hierachy. Feel free to make your changes to the feature set given in images to suit your purpose. At least take one of the images added here, and you can use your own example from any such feature matrix from the internet, of a productline of your liking. Submit the images with your code.
+
+
+
+
+You can study programs developed today in which we designed a Counter hierarchy.
+
+
+
+Note: If you need to combine multiple parents, you can use the technique taught today (composition)
+
+
+
+
+
+
+
+what to upload:
+
+your solutions, images, and README. 4 cpp files for 4 solutions, 2 images for 2  prorblems stated in images, readme (and any extra problem that you end up solving) ... as one single zip.
+
+======================================
+
+Rubrics for feedback/evaluation:
+1) Problem 0 solved (products A,B,C given above): 2
+
+1) Functionality: 3 other problems solved and they are all different domains  (2,4,6) -- the solution need not be perfect.. but you got to explain your thinking.. the fact that you solved it in your own way is good enough for me to get you full marks.
+
+2) Indentation and spacing: 2
+

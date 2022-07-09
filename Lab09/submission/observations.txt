@@ -1,0 +1,70 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+
+We learnt about multiple features of Python in this lecture.
+
+We can assign to variables using the assignment operator in Python (=)
+
+For example a = 10
+
+We can print variables using the function "print" in Python
+print(a)  # Prints 10
+The print function has a parameter end which decides what is printed after the object passed to print is printed
+It is '\n' by default, but can be changed by passing end = ... in the print statement (eg: print(x, end = ''))
+
+We then learnt about lists in Python which are heterogenous containers that can contain any objects (lists are enclosed in [ and ])
+Lists can be printed (eg: l = [1, 2]; print(l)  # prints [1, 2]) and it is possible to append elements to lists using the append method
+We can also use the operator '+' to concatenate 2 lists
+
+Lists and Strings caan be sliced using [:]
+If a is a list/string, a[p:q] returns the sublist/substring from the pth (inclusive) to the qth (exclusive) position (numbering starts at 0)
+a[:q] returns a[0:q], a[p:] returns the substring/sublist from the pth (inclusive) element to the end, and a[:] returns the substring/sublist itself
+
+Strings and Lists can also be indexed with negative indices which go backwards from the end
+
+The method append(x) appends it's argument to the end of a list/string, and the method remove(x) removes it's argument from the list/string
+The method pop(i) removes the element at the ith position of the list/string and returns the removed element
+If no argument is provided to pop, it removes and returns the last element by default
+
+We learnt about conditional operators such as if elif and else. Blocks in Python are demarcated wrt indentation and not with {}
+# symbol makes the line following the # a comment in Python
+
+We then learnt about for loops in Python which have the syntax for a in b where b is an interable and a is the iterator
+The iterable may be a list, a set, or a string or a range object
+(in range(a, b, c) a is the starting (included), b is the ending (excluded) and c is the step (a and c have default values 0 and 1 respectively))
+
+We can also use an else statement after a for loop:
+If we break out of the for loop, the else statement isn't executed, else it is
+
+When continue is encountered in a for loop, we immediately go to the next iteration,
+and when break is encountered we immediately exit the for loop
+
+Python also supports while loops, which iterate while a condition is true. continue and break work here as they do in for loops
+We can use else statements for while loops as well (if we break out of the loop they aren't executed, else they are)
+
+For loops and while loops can both be nested, and if statements can be used in them also
+
+Sets are heterogenous containers in which each element is unique (sets are enclosed in { and })
+The binary operators |, &, - and ^ give the union, intersection, difference and symmetric difference of 2 sets respectively
+We can convert lists to sets using the function set(...) and sets to lists using the function list(...)
+
+We can define functions using the keyword def
+The body of the function must be in an indented block, and we can use the return keyword to return from the function
+
+The logical operators and not and or are also available in Python
+
+When we assign a variable (a name) in Python to a value, the name gets bound to an object created with that value
+Reassignment causes rebinding
+When we assign a = b, a gets bound to the object stored in b also (copying doesn't occur)
+Each Python object has an id that is distinct for distinct objects. The id can be got using the id(...) function
+
+The binary operator 'is' checks if 2 variables are bound to the same object
+a = 3
+b = a
+print(a is b)  # prints True
+
+In Python some objects (such as ints, strings, tuples, etc) are immutable, whereas others (lists, sets, dictionaries, etc) are immutable
+The elements of a set must be hashable (this usually means immutable in practice)
+
+Functions are also objects in Python, which are just bound to names. Hence they can also be passed as arguments to other functions

@@ -1,0 +1,22 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+
+In the Python file ackermann.py, two recursive versions of the Ackermann function were developed, one using memoization, and one using pure recursion.
+Unfortunately, the amount of recursion for the Ackermann Function grows so rapidly that memoization is not of much help. ack(4, 1) fails for both
+the non-memoized and memoized versions of the function.
+
+For memoization of ackermann function, a dictionary was used with tuples (m, n) as the keys, representing the arguments to the function and value
+representing ack(m, n) was made. Every function call to the memoized version would store it's written value along with its arguments in the dictionary.
+
+
+In the textprocessing assignment, 10 text files were created in the directory TESTDATA. Four of these are short stories from the Brothers Grimm,
+Three excerpts from Shakespeare (Hamlet, Macbeth and King Henry V) and three excerpts from the writings of Julius Caesar (two on the Gallic Wars,
+and one about the Civil War). A list was made for each file containing the number of vowels in each word, and these lists were compiled into one 
+list containing the average number of vowels present in a word in each file. Based on this number the lists were filtered by picking the top 
+three files with the largest average number of vowels present in a word.
+
+
+In the optional files, in order to group the files on basis of Author, we consider the length of the file, the average length of each word 
+and the average number of vowels in each word. As we can see, the prediction, although not perfect (it sometimes confuses the stories of 
+Shakespeare and the Brothers Grimm), is still quite accurate.

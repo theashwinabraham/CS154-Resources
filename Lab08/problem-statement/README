@@ -1,0 +1,35 @@
+a.out  -- will be final executable 
+impl1.cpp -- one variant of copy checker function
+impl1.o  -- object code for the first variant 
+impl2.cpp  -- second variant of copy checker function
+impl2.o  --- object code for the second variant
+main.cpp -- main file in which a call to copy checker function is made
+main.o -- object code for main file
+reusable.cpp -- code that is reusable in both varinats: impl1.cpp and impl2.cpp
+similarity.h -- has just  the prototype declaration of copychecker function
+
+
+    we make sure that the delcaration used in main and variant bodies
+  is exactly the same --> through .h file
+
+
+     .h ----> used in main.cpp
+         ----> defined in imple1.cpp  and imple2.cpp
+
+    reusable.cpp --> used in imple1.cpp and impl2.cpp
+
+
+
+how to compile?
+
+  g++ -c main.cpp
+  g++ -c imple1.cpp
+  g++ main.o imple1.o -o build1 ==> a.out ==> run it  (build1)
+
+
+  g++ -c imple2.cpp
+  g++ main.o imple2.o -o build2 ==> a.out ==> run it  (build2)
+
+ without -o name, it will produce a.out 
+
+

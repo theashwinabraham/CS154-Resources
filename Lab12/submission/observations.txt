@@ -1,0 +1,13 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+In mylast function, we impose the condition that mylast of a singleton list is the only element of the list.
+For lists with more than one element, we impose the condition that the last element of the list is recursively the last element of the tail.
+
+For myreverse, we use a helper function, removelast which gives the list - it's last element
+We impose that myreverse of the empty list and the singleton list are themselves and myreverse of other lists have the first and last elements 
+swapped and the middle is recursively the reverse of the original middle.
+
+For palindrome, we use myreverse and impose that the reverse of the list is itself.
+
+For myappend, we impose that the head of the list remains the same, and the tail is recursively the myappend of the tail of the original and the 2nd list.

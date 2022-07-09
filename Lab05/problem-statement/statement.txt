@@ -1,0 +1,9 @@
+Design your interactive game.
+
+
+Please avoid standard stuff like tic-tac-toe, mine-sweeper, cs101 games. think of something new, apply your creativity. try to use colors.
+
+
+What to submit: one cpp file + one observations.txt + 2 sceenshots form the game
+
+Demo files for mouse handlers and widgets have been given in lecture folders earlier.

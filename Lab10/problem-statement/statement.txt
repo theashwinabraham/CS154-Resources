@@ -1,0 +1,50 @@
+write iterative and recursive definitions for the following
+ (1) Three files called Subject Object Verb
+     the function dumps ALL possible statements from words contained 
+     in these files on screen, in simple present tense,
+	simple past tense, simple future tense.
+
+
+     *read all the data from files in three lists first
+	and then call the function on them
+
+ files to be submitted:  
+	iterative_sentencegen.py  and 
+	recursive_sentencegen.py
+
+	the three input files of english words that you have
+	selected
+
+
+  take care of rules of english. File Subject contains 
+	the following wordws: I, we, he, she, it, they.
+	
+
+    write your ideas and observations in observations.txt
+
+
+
+ (2) Extend the above adding your own ideas, and
+explain how you can achive the extension with the
+help of some ideas that we have been discussing
+writing about it briefly in observations.txt
+
+
+ (3) write a recursive function that generates all
+  permutations of elements given in a list
+
+
+problem set uploaded
+
+follow me part also uploaded (readymade python programs)
+
+more problems will be added for practice of recursion.. revisit
+
+
+https://www.wordy.com/writers-workshop/basic-english-sentence-structure/
+
+
+https://academicguides.waldenu.edu/writingcenter/grammar/sentencestructure
+
+
+https://www.grammarly.com/blog/sentence-structure/

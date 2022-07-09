@@ -1,0 +1,3 @@
+Everyone needs to submit 7 cpp files along with one readme file explaining their assumptions, approach etc.
+
+File sumbission format : <Roll_no>.zip

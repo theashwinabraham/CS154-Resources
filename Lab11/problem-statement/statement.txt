@@ -1,0 +1,41 @@
+1) MEMOIZATION FOR FUNCTIONS
+
+Write Ackermann function. Report failing combinations of small input numbers for which it does not work. Implement an internal table of precomputed values to avoid redundant computations.
+
+     -- if a value is computed, it is entered in the table
+    -- if a value is found in  the table, the call is not made
+
+ now report for which failed combinations this scheme works. The technique of storing values is called "MEMOIZATION". This is used in functional programming paradigm. It can also be used in "dynamic programming" (of which you will know more in algorithms courses to come).
+
+2) En-mass data processing (Embarassingly Parallel)  MAP-REDUCE-FILTER
+
+
+Create a directory called TESTDATA
+
+in this directory insert as many text files
+as you want.
+
+
+you are to read every text file and for each file,
+
+create one list for each file in which you write the count of number of vowels used in each word in each file.
+
+
+Reduce all these lists into one single list which
+stores average number of vowels used in each word.
+
+From this filter top three results using filter.
+
+The top theree results should be displayed.
+
+3) Application Optional: use these text processing techniques to cluster texts into groups possibly written by
+same author. For example the 10 text files may have been written by 3 authors, and we are to find out if they have some traits regarding choice of words: e.g. vowels, length of words, use of prepositions etc.
+
+
+submit:
+
+ackermann.py
+
+textprocessing.py
+
+optional.py

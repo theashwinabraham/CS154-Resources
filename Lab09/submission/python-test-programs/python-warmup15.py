@@ -1,0 +1,9 @@
+#! /usr/bin/python3.8
+
+# AUTHOR: ASHWIN ABRAHAM
+
+def f (a):
+    p = a+1
+    return p
+x = f(19)
+print (x)

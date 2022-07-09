@@ -1,0 +1,33 @@
+1) Make a database for the following facts:
+batsman, matchid, score
+and make rules to find batsmen who score more than 5 centuries
+
+for example, a database could be of the form:
+record(sachin,ie2123,129).
+record(sachin,ie2123,134).
+
+
+2) Try writing a declarative logic program to find minimum of a
+list of numbers
+
+3) Try writing a declarative logic program to sort elements
+in an array
+
+4) A program with cut operator (!) has been supplied in class
+folder LogicProgramming on moodle. The cut operator is used
+to look for another solution. Try experimenting with it by
+placing it at different places in the program, like at
+the end of list of subgoals, in between subgoals, or at
+the end of a terminating rule, and write your observations
+on its working.
+
+
+This lab is not evaluated. Participation is counted. No copying
+please.
+
+
+submit: 4 prolog programs and observations.txt
+
+For your reference, Several prolog examples are available
+in the slides, as well
+as in the folder, in addition to your solutions to previous lab.

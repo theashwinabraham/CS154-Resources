@@ -1,0 +1,9 @@
+first write empty bodies and declarations
+
+then add assertions-- preconditions and postconditions
+
+then add bodies
+
+
+
+defense against coding errors

@@ -1,0 +1,86 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+In collection.cpp we were asked to make a class (called Collection) that performed the functions of a stack. 
+A stack is a data structure that follows the LIFO (last in, first out) principle. 
+A stack of integers was made, with a constant capacity that was allotted on construction.
+
+The member variables were:
+    1. A pointer to an integer (arr), representing the location at which the elements of the stack (which are allocated in heap memory) are stored.
+    2. A constant unsigned integer (capacity) representing the capacity of the stack.
+    3. An integer (num) representing the number of elements in the stack currently. Note that, at all times, 0 <= num <= capacity.
+The member functions added were:
+    1. A constructor, taking an integer (size) as an argument representing the capacity of the stack.
+    Initially, the stack is empty (therefore num is set to 0).
+    Here, it is asserted (a precondition) that size >= 0, as clearly the capacity of the stack cannot be negative.
+
+    2. A member function push_back that adds an element to the stack. 
+    Here the precondition that is asserted is that num<capacity. This is as, if num == capacity, then the stack is full, and elements 
+    cannot be added to it.
+    The postcondition asserted is 0<=num && num<=capacity.
+
+    3. A member function pop_back that removes an element from the stack and returns the element.
+    Here the precondition that is asserted is that num>0, as if num == 0, then the stack is empty and elements cannot be removed from it.
+    The postcondition asserted is 0<=num && num<=capacity.
+
+    4. A member function peek that returns the last element of the stack.
+    Here the precondition that is asserted is that num>0, as if num == 0, then the stack is empty and we can't return elements from it.
+    The postcondition asserted is 0<=num && num<=capacity.
+
+    5. A destructor that frees all the memory allocated in the heap.
+
+In collection-correct.cpp, the logic for all these functions has been implemented correctly, and the main function calls all of these functions
+in the appropriate manner.
+In collection-failed1.cpp and collection-failed2.cpp, the logic has been made incorrect (lines 26, 33 (see the comments)) and
+the main function also doesn't call the functions properly (in collection-failed1.cpp it tries to push_back more elements than
+can be accommodated in the stack and in collection-failed2.cpp it tries to create an array with a negative size and tries to 
+pop_back more elements than exist in the stack).
+
+
+In str2int.cpp we were asked to make a function that takes a string that can be converted to an int (such as "123" or "-5369") and return an int
+from it.
+The precondition assertions were:
+    1. That the length of the string passed was greater than 0 (so that "" couldn't be passed)
+    2. That if the first character of the string was '-' then the length of the string was greater than 1 (so that "-" couldn't be passed)
+
+The postcondition assertions were:
+    1. That there are no non-numeric characters (characters other than '0', '1', '2', '3', '4', '5', '6', '7', '8', '9') in the string 
+    (other than possibly '-', which can occur only as the first character).
+    2. That overflow doesn't occur at any step (num <= (INT32_MAX - (s[i]-'0'))/10 is asserted).
+    3. A final check at the end that overflow hasn't occurred. (num>=0 is asserted) (the sign is taken care of after this).
+
+In str2int-correct.cpp, the logic for this function was implemented correctly and the main function calls str2int with the correct arguments.
+However, in str2int-failed1.cpp (line 23 (see comments)) and str2int-failed2.cpp (line 29 (see comments)), the logic was made incorrect.
+Also, main called these functions with incorrect parameters ("3000000000" (causing overflow), "-a23b7" (non-numeric characters) 
+and "" (explicitly dissallowed) in str2int-failed1.cpp and "7b6c7" (non-numeric characters), "10000000000" (causing overflow) and "-" 
+(explicitly dissallowed) in str2int-failed2.cpp).
+
+
+In substring.cpp, we were asked to make a function that searches for a given substring (passed as a parameter) in a given string (also passed
+as a parameter) and returns the position of the first occurence of the substring in the string.
+The precondition assertions were:
+    1. The string length is always greater than or equal to the substring length.
+    2. The string length was always greater than 0 (to prevent "" from being passed as the string)
+    (Technically the only string that is a substring of "" is "" itself (the only subset of the null set is itself), 
+    but since "" has no elements it would be impossible to return the position of the first occurence).
+    (Note that the substring being "" is allowed, as the "" is a substring of every string (the null set is a subset of every set), and 
+    hence for non-empty strings, it would return 0).
+
+The postcondition assertions were:
+    1. That the returned position is >= 0 and < the length of the string (it should be actually in the string)
+    2. That the given substring is actually in the given string (this is achieved by putting an assert(false) statement at the end of the function,
+    since control reaches here if and only if the substring is not present in the original string).
+
+Additionally, at all points in the loop it was asserted that the iterating variables (i and j) were in the appropriate ranges (0<=i<str.length() 
+and 0<=j<sub.length()).
+
+In substring-correct.cpp, the logic for this function was implemented correctly and the main function calls substring with the correct arguments.
+However, in substring-failed1.cpp and substring-failed2.cpp, the logic was made incorrect (line 27 (see comments)).
+Also, main called these functions with incorrect parameters ("Hello", "Hello World"; "", "llo"; "", ""; and "Goodbye", "Hello" 
+in substring-failed1.cpp and "Hello", "hello"; "hello", "elo"; "World", "Woor"; and "Hello World", "lloWor" in substring-failed2.cpp.
+Clearly, in none of these sets of parameters is the 2nd string a substring of the first one (except perhaps "", "" but as explained earlier
+this is explicitly dissallowed)). 
+
+
+Clearly, these example programs show us how defensive programming by using assert statements is useful and can act as a defence against 
+errors (especially runtime errors) in programming.

@@ -1,0 +1,13 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+A class for Circle was made that inherited from Fl_Widget. 
+This class had additional attributes x, y, r and col, representing the coordinates of the center of the circle, its radius and its color
+The class also had a draw() function that overrid the virtual draw() function present in class Fl_Widget.
+
+A class for Hexagons was also made that inherited from Fl_Widget. 
+This class had additional attributes x, y, r, angle and col, 
+representing the coordinates of the center of the hexagon, its sidelength, the angle it makes with the vertical and its color
+The class also had a draw() function that overrid the virtual draw() function present in class Fl_Widget.
+
+Circles were created dynamically with random colors to create the pattern shown in the Rangoli

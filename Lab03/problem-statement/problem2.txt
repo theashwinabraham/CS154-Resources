@@ -1,0 +1,11 @@
+
+ TV sets and features
+
+ 
+
+internet    y        n     n    y
+cable       y        n     y    n
+videoin     y        y     n    y
+audioin     y        y     y    n
+videoout    n        n     y   y
+audioout    y       n      y    n

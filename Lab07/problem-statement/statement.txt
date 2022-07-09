@@ -1,0 +1,40 @@
+(A) Given collection.cpp, strirng2int.cpp, substring.cpp, for each
+
+complete their code by DEFENSIE PROGAMMING as follows:
+
+       first add assertions to it
+
+       Then start adding your functions.
+
+As you develop your code, if any assertion fails, submit that version of the code and reason out in observations file as to why the assertion failed.
+
+Continue this process till you get code that passes all assertions and is correct.
+
+
+what to submit:
+for each file xxxx.cpp submit:
+      xxxx-failed1.cpp and  xxxx-failed1.cpp
+and the final xxxx-correct.cpp
+
+
+failed versions catch failures by assertions, and correct version
+do not fail the assertions.
+
+observations.txt  -- explains why assertion(s) failed.
+
+[ps: If you end up not making a mistake, then tweak your correct code and
+make incorrect versions which get detected by assertion statements.]
+
+
+Notes:
+
+1) collection works as a stack
+2) find function returns position of the first occurence
+3) you can take inputs from user
+4) no more indentation/cout rubrics, but follow the guidelies
+5) string2int converts strings to integers "123" -> 123, "a12" is an error
+6) no need to report errors by cout
+7) assertions fail when there is error
+8) we are learning to use assertions to our advantage while developing
+9) we develop assertions before the body
+10)no error in correct code! if an error happens by changing say the parameters, it should get trapped by your assertions==> try to achieve this..

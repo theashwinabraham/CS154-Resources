@@ -1,0 +1,11 @@
+kill
+ask
+ping
+thank
+walk
+crown
+murder
+eat
+love
+live
+like

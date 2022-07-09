@@ -1,0 +1,49 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+A plagiarism checker was developed which checks how similiar two C++ program files are.
+An integer between 0 and 100 is printed, 0 being when the files are totally dissimiliar, and 100 being when the files are effectively identical.
+
+
+
+USAGE INSTRUCTIONS:
+There are 3 files, impl1.cpp, impl2.cpp and impl3.cpp each containing different implementations of the function checksimilarity.
+Choose any one of these 3 files and compile it along with main.cpp (for example, g++ main.cpp impl2.cpp).
+Then to execute the executable while supplying the names/paths of the files to be compared as command line arguments 
+(for example ./a.out file1.cpp file2.cpp)
+
+
+
+The methodology for plagiarism detection was that although plagiarizers may change variable names and function names,
+the control flow of the program would remain the same. Hence the number of C++ keywords, the number of brackets ( '(', ')', '{', '}', '[' and ']'),
+the number of special symbols ('!', '+', '=', '.', etc) and the length of the file (number of characters) would not change significantly.
+
+impl1.cpp returns the weighted product of the relative difference in keywords and the relative difference in length of the file scaled to 100.
+
+impl2.cpp returns the weighted product of the relative difference in symbols, the relative difference in brackets and the
+relative difference in length, scaled to 100.
+
+impl3.cpp combines the workings of impl1.cpp and impl2.cpp and returns the weighted product of the relative difference in keywords, 
+the relative difference in symbols, the relative difference in brackets and the relative difference in length, scaled to 100.
+
+
+It was noticed that a lot of code could be reused in the implementation of impl1.cpp, impl2.cpp and imp3.cpp. Hence all the reusable code was 
+put into a header file called reusable.h which was included in main.cpp, impl1.cpp, impl2.cpp and impl3.cpp.
+
+This header file defines a class File (a common supperclass), which abstracts the files being compared.
+It has members num_char (the number of characters in the file), keyword_occurrences[num_keywords] (the number of occurrences of each keyword),
+symbol_occurrences[num_symbols] (the number of occurrences of each symbol) and num_brackets[3] (number of occurrences of each pair of brackets).
+
+It has a constructor that takes the file name/path as a string and appropriately sets the values of each of the member variables appropriately.
+It then has const member methods (length(), operator[], symbol_occurrence() and bracket_occurrence()) that return 
+the length of the file, and the ith element of keyword_occurrences, symbol_occurrences and num_brackets respectively.
+
+Hence the technique of separate compilation and linking the compiled files gave us the choice of testing different variants by linking different
+files, and the use of header files allowed us to consolidate all reused code in one file.
+
+Various concepts of Defensive Programming were also utilized in this code such as using assert statements in the various member functions of
+the class File to ensure that the arguments passed are correct and also assert statements in some implementations of checksimilarity() to ensure
+that the output is not nonsensical.
+
+In main.cpp, to catch various run time errors that could be caused by passing incorrect files as command line arguments, exception handling was 
+introduced in the form of a try-catch block.

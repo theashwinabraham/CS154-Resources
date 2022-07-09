@@ -1,0 +1,73 @@
+CS 154 Lab 5
+Snake: The Game
+Ashwin Abraham
+Roll number: 210050023
+24/04/2022
+
+
+A game of Snake was made using FLTK.
+
+The following are the rules of the game:
+    1. There is a snake (in green) which can be moved using the WASD keys or the arrow keys
+    2. As the snake moves it leaves a trail behind
+    3. The Game is over if the snake hits itself or if it hits the boundaries of the screen
+    4. Food for the snake is located at random positions on the screen
+    5. The snake starts with length 1
+    6. As the snake eats the food, its length increases, thus increasing the difficulty of the game
+    7. When food is eaten more food appears at a different location
+    8. The score is equal to the amount of food eaten (which is equal to it's length - 1)
+    9. The aim of the game is to maximize the score
+
+Coding the game:
+
+In the code, the moving of the snake, checking whether game is over, positioning the food at random locations, etc 
+is done by a "callback function". 
+This function is a function of signature void f(void* ptr), where ptr is a pointer to the data that the function is 
+to act upon. Since ptr is of type void*, it must be casted back to its actual type using reinterpret_cast.
+In the main function there is a line Fl::add_timeout(time_step, update_win, window); which waits for time_step seconds 
+and then calls update_win, passing window (which here is a pointer to the window) as a parameter (update_win is passed as
+a function pointer). update_win itself calls Fl::add_timeout(time_step, update_win, window) (unless the game is over) 
+hence causing update_win to be called repeatedly in intervals of time_step.
+
+In update_win, there are sections that manage the score box, place food on random locations on screen,
+add a piece to the snake when it eats food, move the snake, and check whether Game is over or not
+
+Handling of keyboard events was done by a Class Handler, which inherited from the class Fl_Widget. Since the constructor of
+class Fl_Widget is protected, the inherited object of Fl_Widget in class Handler must be initialized with an initialization
+list. Since Handler is not a graphical object but rather exists solely to handle keyboard events, Fl_Widget was initialized 
+with values 0, 0, 0, 0. Since Fl_Widget is an abstract class, with the pure virtual method void draw(), draw()
+was overriden in Handler in order to be able to instantiate it. Since Handler is not a graphical object,
+the body of it's draw function was left empty. The destructor of Handler was declared as virtual (which wasn't really required here but is 
+good practice). The function actually being used in Handler was int handle(int event).
+FLTK passes events as arguments to this function and we use this argument to get the appropriate responses to each event.
+An object (named handler) of class Handler was instantiated in the main function and keyboard events were handled by this object.
+
+Then a class Piece was created, describing each piece that together form the Snake. Since this class is never directly instantiated
+or handled by the main function, in order to better encapsulate the class better, all the functions in this class were declared private
+and the classes Handler and Snake and the function update_win were declared as friends of this class. 
+The class Piece has attributes x, y (which are integers describing the position of the piece) and an int dir that
+represents the direction of motion of the piece (it is numerically equal to the key encoding of the arrow key 
+corresponding to the direction of motion). It has a constructor that initializes x, y, and dir according to the values passed to it
+and const methods next_x() and next_y() that return the next position of the piece as it moves in the direction given by dir.
+It also has a method move() that sets x and y to next_x() and next_y() (thus moving the piece).
+
+Then a class Snake was created, describing the overall Snake. It had a member variable snake which was a dynamic array (vector) of
+pointers pieces. So that inserting pieces could be done efficiently (in O(1)), the head of the snake was made the last element of the array,
+and the tail of the snake was made the first element of the array. The constructor of snake filled this array with a number
+of pointers to pieces constructed dynamically on the heap. By default it created one piece located at (0, DIM_Y/2) (DIM_Y is the screen height).
+It also had methods void add(Piece*) which added a pointer to a Piece at the end of the array (making it the new head), head() and tail() which
+returned the head (last element) and tail (first element) of the array, size() (which returns the number of pieces in the snake), and three const 
+methods that checked for intersection (intersects_boundary(), self_intersects(), intersects(int x, int y)) that checked 
+if the head intersects the screen's boundary, checked if the head intersects any part of the snake and checked
+if a point lies on the snake (including head). These methods were used to check whether game was over or not.
+The operator [] was also overloaded for this class so that we could access the ith element of the snake by writing snake[i].
+The destructor of the snake was made virtual and it deletes all the Pieces that were dynamically created on the heap.
+After the definition of this class, an object (called snake) of this class was created with global scope which represents the snake in the program.
+
+Finally, a class Pixel was created, which inherits from class Fl_Widget. Objects of this class cover the screen. They are usually not visible,
+but when shown they make up the green pixels of the snake and the red pixels of its food. It has attributes describing the position and color of the 
+pixels. In order to be able to instantiate this class, the pure virtual function draw() in Fl_Widget was overriden to draw a pixel.
+
+A dynamic array of pointers to red (representing food) and green pixels (representing the snake) was created at global scope and filled with 
+pointers to dynamically created red and green pixels respectively, covering the screen. To display the snake/it's food, the appropriate pixels
+were made visible on the screen.

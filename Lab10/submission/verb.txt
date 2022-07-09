@@ -1,0 +1,7 @@
+kill
+ask
+ping
+thank
+walk
+crown
+murder

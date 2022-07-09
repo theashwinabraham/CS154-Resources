@@ -1,0 +1,11 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+In the C programs (program1.c and program2.c), which were written from a Procedural (non Object Oriented) Perspective,
+there were no classes/structs/objects. 
+
+We mainly used functions instead of classes/structs/objects.
+
+
+In the C++ programs (program1.cpp and program2.cpp) the variables from the C programs were wrapped into classes with appropriate member functions.
+These programs were written in an Object Oriented Perspective.

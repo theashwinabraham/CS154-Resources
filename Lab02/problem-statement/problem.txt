@@ -1,0 +1,55 @@
+Design and implement the following object abstractions as classes.
+The object is to be used by instantiating its class in main().
+
+The functions that you call on the objects go into public section
+of the class.
+
+The functions use common set of variables which form the object's
+state, which is private in the class.
+
+
+Stick to filenames as given below.
+
+
+List of Abstractions and filenames:
+
+1. Fan (as discussed in the class): 
+
+     fan.cpp
+
+2. ATM (as discussed in the class): 
+
+
+     atm.cpp
+
+3. DrinksVendingMachine (takes in a coin and choice of drink, and
+   provides the drink if available. Someone can replenish the stocks
+  of drinks as well:  
+
+
+      vending.cpp
+
+4. Dice (toss to generates a number on top): 
+
+      dice.cpp
+
+5. TupleSpace(A collection of key-value pairs: functions to insert
+  delete and find elements in it): 
+
+      tuplespace.cpp
+
+6. Lift (it has internal and external buttons (interfaces). you can merge them
+into one single public section.  For
+simplicity, you can assume that there are
+     only two floors) 
+
+     lift.cpp
+
+7. RoomScheduler (rooms in the department, request for bookings, 
+   cancell bookings, schedule for one week, state you assumptions)
+
+    roomscheduler.cpp 
+
+
+
+

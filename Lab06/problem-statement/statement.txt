@@ -1,0 +1,23 @@
+Given are a set of badly written programs. Badly written programs, may be fine functionally for producing correct output from given input. But they carry "bad smells" which hinder the program's reusability, maintainability, long sustainance, modifiability, understandability etc. What are these "bad smells" in programs? Here is a list of a few bad smells and how to remove them:
+ -- too long method bodies  (create new functions and use function calls)
+
+--  redundant code, similar looking code, which can easily be parameterized (create new functions, and parameterize)
+-- code not indented, looks messy - (indent it)
+-- variable names badly chosen (rename everywhere)
+-- too big main -- break it down in function calls
+-- goto -- remove it use structured programming
+-- awkward logic -- messy termination, messy initialization, jumping around (use strutured programming-- good nested blocks
+    such as good if-else, good while-do or do-while, for, switch
+-- unused code, unused parameters, redundant parameters
+-- missing abstractions, code scatters around (modularize: use new classes, or functions)
+
+Bad smells occur in object oriented programs too.
+
+
+you are given programs with bad smells, you are to improve them, clean up, beautify, remove bad
+smells, improve on their designs in terms of new functions and abstractions..
+
+
+submit: improved programs, and observations.txt
+
+ps: also attached here is a copy of test paper on 2020 batch, which carries the same code given in atoms.cpp. This pdf is just for your reading and viewing and solving pleasure!

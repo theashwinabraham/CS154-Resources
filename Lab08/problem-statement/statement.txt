@@ -1,0 +1,41 @@
+Program  to be developed:
+
+   Copy Checker
+
+
+What we will learn?
+ 1) The technique of separate compilation  and choice of
+  building programs from components by linking variants  (6)
+ 2) Reuse of common code across variants -- can be designed or added as afterthought (2)
+ 2) Make use of assertions and/or exceptions in your program (2)
+
+
+develop 3 variations of function
+
+ int checksimilarity (string file1, string file2)
+
+
+in files named impl1.cpp  impl2.cpp imple3.cpp
+
+the int value returned is a similarity score between 0 to 100.
+
+use separate compilation to compile variants and test them
+
+
+Inside the programs, make use of assertions and exceptions to catch
+exceptional conditions and to recover from the program
+
+
+Try to enhance reuse in  your code by having common superclass
+in a common file.
+
+
+code to be developed is not expected to be large, but
+feel free!
+
+submit:
+   the above 3 files,
+   one main.cpp with main program in it,
+   reusablelib.cpp  with reusable classes/functions in it
+    one observations.txt explaining the strategies used, reuse
+     obtained, and use of assertions/exceptions

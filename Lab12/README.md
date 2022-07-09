@@ -1,0 +1,1 @@
+# Lab 12: Declarative Programming in Prolog

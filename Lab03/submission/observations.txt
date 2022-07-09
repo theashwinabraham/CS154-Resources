@@ -1,0 +1,86 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+In this Lab we used inheritance to model real world objects using classes
+
+In Problem 0 (Problem0.cpp):
+    This was the problem from the text on Moodle
+    3 classes were created:
+        1. ProductC, containing only feature1
+        2. ProductB containing feature3 and feature1 (inherited from ProductC)
+        3. ProductA containing feature2 and feature3 (inherited from ProductB) and feature1 (inherited from ProductC via ProductB)
+    
+    These classes were then instantiated and their methods were called in the main function
+    This is as per the inheritance heirarchy matrix given in the question:
+                Product A        Product B    Product C
+
+    feature 1       y              y              y
+
+    feature 2       y
+
+    feature 3       y              y
+
+    Note that the description given in the question 
+    (In the above example, Superclass has feature 2 only, then its child has feature 3 added, and then the child of the subclass has feature 1 added), 
+    it is said that the order of adding features is 2, 3, 1 whereas from the matrix it is clearly seen to be 1, 3, 2. 
+    In the program the order 1, 3, 2 has been followed
+
+
+In Problem 1 (Problem1.cpp):
+    This was the problem based on the Laptops given in best-gaming-laptops-under-600-1.jpg (present in this zip file)
+
+    A base class Laptop was created Implementing all the basic features of Laptops
+    It was considered that the extra features in some Laptops but not all are presence of HDD, SSD, and all other features are present in all Laptops
+
+    Therefore, 2 classes HDD and SSD were made containing the members and methods associated with HDDs and SSDs respectively
+    These classes inherited (virtually) from the base Laptop class, so that they contained all the features required for a Laptop containing a HDD/SSD
+    Class HDD was inherited into all Laptops with HDD feature and class SSD was inherited into all Laptops with SSD feature
+    Since some Laptops might contain both SSDs and HDDs, there was a possibility of Diamond Inheritance and therefore Laptop was inherited virtually
+    into classes HDD and SSD. 
+
+    Three more classes were made, HDDLaptop (describing Laptops which have HDDs but not SSDs), SSDLaptop (describing Laptops which have SSDs 
+    but not HDDs), and SSDHDDLaptop (describing Laptops with both SSDs and HDDs. This one shows Diamond Inheritance.)
+
+    The laptops given in the image were instantiated in the main function and their properties were printed out to the terminal
+
+
+In Problem 2 (Problem2.cpp):
+    This was the problem based on the TV set problem. 
+    TV sets and features
+    internet    y        n     n    y
+    cable       y        n     y    n
+    videoin     y        y     n    y
+    audioin     y        y     y    n
+    videoout    n        n     y    y
+    audioout    y       n      y    n
+
+    A base class TV was made containing all the properties common to all TVs
+    Then for each feature a class was made containing member functions related to the feature was made
+
+    Then 4 classes were made for the 4 types of TVs (TV1, TV2, TV3, TV4). Each of these classes inherited from the base TV class and from the 
+    classes of the features they possessed, according to the table given
+
+    Some TVs were then instantiated to and their methods were called in the main function
+
+
+In Problem 1 (Problem1.cpp):
+    This was the problem based on the Smartphones given in smart-phone-comparison-table (present in this zip file)
+
+    A base class Smartphone was created Implementing all the basic features of Smartphones
+    It was considered that the extra features in some Smartphones but not all are storage expansion and Battery Replacement, and all other 
+    features are present in all Smartphones.
+
+    Therefore, 2 classes StorExp (Storage Expansion) and BatteryReplacement were made containing the members and methods associated with 
+    Storage Expansion and Battery Replacement
+    These classes inherited (virtually) from the base Smartphone class, so that they contained all the features required for a Smartphone with 
+    Storage Expansion or Battery Replacement respectively
+    Class StorExp was inherited into all Smartphones with Storage Expansion feature and class BatteryReplacement was inherited into all Smartphones 
+    with BatteryReplacement feature
+    Since some Smartphones might contain both Storage Expansion and Battery Replacement, there was a possibility of Diamond Inheritance and therefore 
+    Smartphone was inherited virtually into classes StorExp and BatteryReplacement. 
+
+    Three more classes were made, StorExpphone (describing Smartphones which have Storage Expansion but not Battery Replacement), 
+    BRphone (describing Smartphones which have Battery Replacement but not Storage Expansion), 
+    BRStorExpPhone (describing Smartphones with both Storage Expansion and Battery Replacement. This one shows Diamond Inheritance.)
+
+    The Smartphones given in the image were instantiated in the main function and their properties were printed out to the terminal

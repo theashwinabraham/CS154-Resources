@@ -1,0 +1,17 @@
+We won't use loops, variable assignments, global values, and still solve computational problems. In continuation with what we discussed today, in the lab we explore one such paradigm- the logic programming paradigm. We will use gnu prolog interpreter gprolog. Join me for a follow me part after which a problem statement will be released. Two videos have been posted separately: one on installation of gprolog and one about a simple program in prolog with execution instructions.
+
+Problems to be solved:
+mylast(L,E)
+
+myreverse([A|L],[B|U]).
+
+palindrome([A|L])
+
+myappend([A|L],[B|U],[A|R])
+
+submit
+
+-- four programs-- all can be in one file 
+- one observations.txt explain briefly your idea of how it works
+
+do on your own, understand them.

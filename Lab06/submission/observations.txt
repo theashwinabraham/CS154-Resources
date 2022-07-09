@@ -1,0 +1,55 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+The given programs atoms.cpp and alchemy.cpp, although they functioned well, were very poorly written, 
+with respect to their readability, understandability, debuggability, maintainability and extensibility.
+
+Some reasons why this was the case are:
+    1. Usage of Global Variables when not required, and declaring variables outside/far away from the scope in which they are used
+    2. Repetition of code everywhere/lack of abstractions
+    3. Overly long function bodies/lack of abstractions
+    4. Unused parameters, useless pieces of code
+    5. Variable names not descriptive of their use (one or two letter variable names) 
+    (in combination with point 1 this makes the code extremely unreadable)
+    6. Badly structured control flow (improper if, else statements and badly made loops)
+    7. Badly indented and structured code
+    8. Lack of comments
+
+Note that the database files required for these programs to function were missing, and hence they were created
+(Note that the .c files aren't code files but rather plaintext data files)
+
+Some ways of how these problems were fixed were:
+    1. All the unnecessary global variables were eliminated, and variables were declared in/as close as possible to the scopes in which they were
+    used. For example, global variables such as "blh" (alchemy.cpp), "m" (atoms.cpp) were eliminated and replaced with more local variables.
+    Also, in order to make the program easier to modify, literals repeated throughout the programs (such as 364 (alchemy.cpp) and 118, 350 (atoms.cpp))
+    were replaced with macros or const global variables, with well defined names.
+
+    2, 3. In alchemy.cpp and atoms.cpp there was a severe lack of abstraction. In atoms.cpp, there was only one function other than main, 
+    and it's body was overly large, and it repeated itself at many points. Hence it's body was split into multiple functions 
+    (such as circle, filled_circle, draw_shell, fill_penultimate) etc. The previously existing function was also given a better name
+    (from "f" to "interact"). In alchemy.cpp, the struct was transformed into a class for better abstraction.
+
+    4. In both alchemy.cpp, and atoms.cpp once the programs were restructured, many global variables (such as "blh", "g", "m", "q", "x", etc)
+    were found to be useless and deleted. Note that in atoms.cpp there is a step where data from files is stored and never used, but since the 
+    pdf given to us "quizIfinal.pdf" specifies the structure of these files, how to read from them and what they represent, this code was not 
+    deleted as it may be of future use (it increases the extensibility of the program).
+
+    5. The biggest issue with both atoms.cpp and alchemy.cpp were the cryptically named variables (with only one or two letter names)
+    Some examples of these are: "g", "f", "e", "o", "oo", "baba" (alchemy.cpp) and "n", "m", "q", "f", "g", "e", "h" (atoms.cpp).
+    These were all renamed to make their usage more descriptive. In fact, after the restructuring of the program, it was found that many
+    of these variables became redundant. The C++ Style Guide recommends that the length of a variable name be proportional to their scope,
+    in order to maximize readability and minimize the chance of name-clashes. This guideline was flagrantly violated in the original programs,
+    but is now followed.
+
+    6. In alchemy.cpp and atoms.cpp the lack of abstraction led to bad control flow. This was fixed by increasing the level of abstraction.
+    In alchemy.cpp many while loops were simplified as well (for example, while(!input.eof()){... input >> x; ...} was simplified to
+    while(input >> x){...} wherever possible).
+
+    7. Both programs, but especially atoms.cpp were badly indented (atoms.cpp wasn't indented at all). This was fixed, and now they are well indented.
+
+    8. Although there were some comments in both programs, many steps were left unexplained. This is now fixed, and each non-trivial step is 
+    commented descriptively.
+
+From this, we learn that whatever paradigm a program follows (Procedural, Object Oriented, etc) and whether or not it does its job, if
+good programming practices were not followed in the development of the program, it becomes tough to read, understand, debug, maintain or extend
+the code.

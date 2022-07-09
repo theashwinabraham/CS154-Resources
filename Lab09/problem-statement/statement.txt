@@ -1,0 +1,19 @@
+1. Type out all programs in slides (lecture slides) and run them, feel free to modify them and write your observations, findings in observations.txt (don't submit the programs)
+
+2. solve these problems using anything appropriate from among for iterations, while looping, function definitions, lists, sets, and functions on them
+   a) given two lists, find frequency of occurence of common elements. output that in a separate list of lists. for example
+   L1 = [1,2,3,1,4]
+   L2 = [1,1,2,2,21,9,4] 
+
+  freq(L1, L2)  to return list of lists [ [1,4], [2,4], [4,2] ]
+   b) given a set, produce  a powerset, which is a set of all subsets
+ of that set
+ L1 = {1,2,3}
+
+ power(L1) would return { {},{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}}
+
+
+you can submit your solutions to part 2 in two python files.
+
+submit as much as you solve it. solutions should be smaller and
+neater given the simplicity and power of python constructs.

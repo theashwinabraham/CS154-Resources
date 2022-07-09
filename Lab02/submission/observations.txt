@@ -1,0 +1,77 @@
+NAME: ASHWIN ABRAHAM
+ROLL NO: 210050023
+
+1. class Fan (fan.cpp):
+    A class Fan was implemented which models a fan
+
+    We are able to switch the fan on and off, increase and decrease it's speed, and check whether the fan is on and check the fan speed
+
+    Please refer to the comments in the code for further details
+
+
+2. class ATM (atm.cpp):
+    A class ATM was implemented which models an ATM
+    each object of type ATM represents an account accessed by an ATM
+
+    We are able to get and set the PIN of the account and there is a method for us to enter a PIN and check whether it is the correct PIN
+    We are also able to deposit, withdraw and transfer money from/to the ATM
+
+    Please refer to the comments in the code for further clarification
+
+
+3. class DrinksVendingMachine (vending.cpp):
+    An auxiliary class Drink was implemented describing name, stock, and number of a drink in the vending machine
+
+    Then the class DrinksVendingMachine was implemented describing all the drinks in the vending machine
+
+    We are able to add drinks (replenish the stock of drinks), purchase drinks by entering correct number of coins, 
+    and print all the available drinks in the machine along with their costs and quantity
+
+    Please refer to the comments in the code for further clarification
+
+
+4. class Dice (dice.cpp):
+    A class Dice was implemented describing the dice
+
+    We are able to toss the die and we are able to read the random number at the top
+
+    Please refer to the comments in the code for further clarification
+
+
+5. class Tuplespace (tuplespace.cpp):
+    An auxiliary class template Tuple was created to model a key-value pair
+
+    Then the class template Tuplespace was created, modelling a set of key value pairs
+    Note that all the keys in a Tuplespace are unique
+
+    We are able to Insert and Delete key-value pairs using Insert and Delete functions
+
+    We are also able to access a reference to the value of a key-value pair using the operator []
+    For example f["Hello"] gives the value associated with the key "Hello" in the Tuplespace f.
+    Note that there is another way of adding key-value pairs using the operator []
+    If the argument of the operator is not in the set of keys of the Tuplespace, the arguments is added as a new key
+    Therefore, if "Hello" is not a key to the Tuplespace f, the f["Hello"] = 3 adds the key-value pair ("Hello", 3) to f
+
+    We can also get the size of the tuple space (the number of key value pairs)
+
+    Please refer to the comments in the code for further clarification
+
+
+6. class Lift (lift.cpp):
+    A class Lift was implemented modelling the behaviour of a lift in a building with only 2 Floors (a Ground Floor and a First Floor)
+
+    We can get the floor the lift is currently in. The inner and outer buttons of the lift have been merged into 2 functions, one that moves 
+    the lift to the floor it is not currently in and another one that moves the lift to a given floor
+
+    Please refer to the comments in the code for further clarification
+
+
+7. class RoomScheduler (roomscheduler.cpp):
+    An auxiliary class Room was implemented to model the dates in the week and the events for which a room is booked
+
+    Then the class RoomScheduler was implemented describing the overall schedule of a set of rooms
+
+    We are able to add and remove rooms from the set of rooms, and we are able to book rooms and cancel rooms for particular days
+    We are also able to print the schedule of all the rooms for the week, and we can get the number of rooms being considered
+
+    Please refer to the comments in the code for further clarification

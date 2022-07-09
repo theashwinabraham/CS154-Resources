@@ -1,0 +1,17 @@
+Lab 1 prorgrams submission
+go though the assignment statement and submit your solutions by 530 pm here
+
+
+
+code does what it is supposed to do (the design and use of abstractions), compiles and executes ()
+Code is well indented, spaced ()..
+
+explained the strategy/design/what has been asked, in README (), if all aspects are not touched upon as per statement, marks will be cut here
+
+
+Feedback will be given by commentors who will physically go through your code
+Rubrics will change with assignments
+
+Let me know of any suggestions that you may have
+
+-- rkj
