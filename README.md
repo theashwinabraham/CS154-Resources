@@ -21,7 +21,7 @@ During the CS 152 and 154 courses, you will need to use Linux/a Linux VM (if you
     sudo apt install build-essential
 ## To install a Python interpreter, run:
     sudo apt install python3.8
-## To install the FLTK compiler, run the following commands
+## To install the FLTK compiler, run the following commands:
     sudo apt install libxft-dev
 
     sudo apt install xorg
@@ -35,11 +35,14 @@ During the CS 152 and 154 courses, you will need to use Linux/a Linux VM (if you
     ./configure
 
 
-To compile a file (named ```file.cpp``` for example), run
+To compile a file (named ```file.cpp``` for example), run:
+
     fltk-config --compile file.cpp
+
 This will create and executable named ```file```
 
 Note that if you are using an IDE (such as VSCode), then you may also find it helpful to add the directory ```FL``` to your include path by running:
+
     cp -r FL /usr/local/include
 
 ## To install the ghc compiler, run:
