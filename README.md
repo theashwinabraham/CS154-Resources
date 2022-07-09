@@ -34,9 +34,13 @@ During the CS 152 and 154 courses, you will need to use Linux/a Linux VM (if you
 
     ./configure
 
+
 To compile a file (named ```file.cpp``` for example), run
     fltk-config --compile file.cpp
 This will create and executable named ```file```
+
+Note that if you are using an IDE (such as VSCode), then you may also find it helpful to add the directory ```FL``` to your include path by running:
+    cp -r FL /usr/local/include
 ## To install the ghc compiler, run:
     sudo apt install ghc
 ## To install the latest version of gprolog:
