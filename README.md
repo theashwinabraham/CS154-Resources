@@ -22,23 +22,21 @@ During the CS 152 and 154 courses, you will need to use Linux/a Linux VM (if you
 ## To install a Python interpreter, run:
     sudo apt install python3.8
 ## To install the FLTK compiler, run the following commands
-```sudo apt install libxft-dev```
-
-```sudo apt install xorg```
-
-```wget https://www.fltk.org/pub/fltk/1.3.8/fltk-1.3.8-source.tar.bz2```
-```tar -xvf fltk-1.3.8-source.tar.bz2```
-```cd fltk-1.3.8```
-```./configure```
+    sudo apt install libxft-dev
+    sudo apt install xorg```
+    wget https://www.fltk.org/pub/fltk/1.3.8/fltk-1.3.8-source.tar.bz2
+    tar -xvf fltk-1.3.8-source.tar.bz2
+    cd fltk-1.3.8
+    ./configure
 To compile a file (named ```file.cpp``` for example), run
-```fltk-config --compile file.cpp```
+    fltk-config --compile file.cpp
 This will create and executable named ```file```
 ## To install the ghc compiler, run:
-```sudo apt install ghc```
+    sudo apt install ghc
 ## To install the latest version of gprolog:
-```wget http://www.gprolog.org/gprolog-1.5.0.tar.gz```
-```tar -xvf gprolog-1.5.0.tar.gz```
-```cd gprolog-1.5.0/src```
-```./configure```
-```make```
-```sudo make install```
+    wget http://www.gprolog.org/gprolog-1.5.0.tar.gz
+    tar -xvf gprolog-1.5.0.tar.gz
+    cd gprolog-1.5.0/src
+    ./configure
+    make
+    sudo make install
