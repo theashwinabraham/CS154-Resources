@@ -18,9 +18,9 @@ During the CS 152 and 154 courses, you will need to use Linux/a Linux VM (if you
 - The gprolog interpreter for Prolog
 
 ## To install gcc and g++, run:
-```sudo apt install build-essential```
+    sudo apt install build-essential
 ## To install a Python interpreter, run:
-```sudo apt install python3.8```
+    sudo apt install python3.8
 ## To install the FLTK compiler, run the following commands
 ```sudo apt install libxft-dev```
 
